@@ -108,14 +108,8 @@ public class UndirectedGraph implements Graph, Cloneable{
 
     //Возврацает строку в которой список смежности
     public String createAdjacencyStructure(){
-        StringBuilder stringBuilder = new StringBuilder(" ");
+        StringBuilder stringBuilder = new StringBuilder();
         for(int i = 0; i < this.getAmountOfVertices(); i++){
-            stringBuilder.append(this.getGraph().get(i).getName());
-        }
-        stringBuilder.append("\n");
-
-        for(int i = 0; i < this.getAmountOfVertices(); i++){
-            stringBuilder.append(this.getGraph().get(i).getName());
             for (int j = 0; j < this.getAmountOfVertices(); j++){
                 stringBuilder.append(this.getGraph().get(i).
                         isNeighbors(this.getGraph().get(j))?1:0);
